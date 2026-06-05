@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -15,22 +10,26 @@
   --color-text: #1b1c1c;
   --color-bg: #fafffe;
   --color-container: #ffffff;
-  --font-philosopher: var(--font-philosopher-sans);
-  --font-nunito: var(--font-nunito-sans);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-philosopher: var(--font-philosopher);
+  --font-nunito: var(--font-nunito);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  font-family: var(--font-nunito), Arial, Helvetica, sans-serif;
 }
 
-* {
-  font-family: var(--font-nunito), Arial, Helvetica, sans-serif;
+button {
+  cursor: pointer;
+}
+
+.max-width {
+  max-width: 1200px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .max-width {
+    padding-inline: 1rem;
+  }
 }

@@ -1,16 +1,18 @@
+import Footer from "@/src/partials/Footer";
+import Header from "@/src/partials/Header";
 import type { Metadata } from "next";
 import { Nunito, Philosopher } from "next/font/google";
 import "./globals.css";
 
-const philosopher = Philosopher({
+export const philosopher = Philosopher({
   weight: ["400", "700"],
-  variable: "--font-philosopher-sans",
+  variable: "--font-philosopher",
   subsets: ["latin"],
 });
 
 const nunito = Nunito({
   weight: ["400", "700"],
-  variable: "--font-nunito-sans",
+  variable: "--font-nunito",
   subsets: ["latin"],
 });
 
@@ -27,9 +29,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${philosopher.variable} ${nunito.variable} h-full antialiased`}
+      className={`${philosopher.variable} ${nunito.variable} h-full antialiased bg-bg`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
