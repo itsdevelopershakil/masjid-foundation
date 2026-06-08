@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
+import { getLanguage } from "../lib/getLanguage";
 
-const PrimaryButton = ({
+const PrimaryButton = async ({
   link,
   children,
   className,
@@ -10,10 +11,11 @@ const PrimaryButton = ({
   children: React.ReactNode;
   className?: string;
 }) => {
+  const language = await getLanguage();
   return (
     <Link
       href={link}
-      className={`bg-primary hover:bg-hover duration-300 text-container font-bold rounded-md font-philosopher ${className}`}
+      className={`text-xs sm:text-base bg-primary hover:bg-hover duration-300 text-container rounded-md ${language === "bn" ? "font-noirrit" : "font-philosopher font-bold"} ${className}`}
     >
       {children}
     </Link>

@@ -12,10 +12,12 @@
   --color-container: #ffffff;
   --font-philosopher: var(--font-philosopher);
   --font-nunito: var(--font-nunito);
+  --font-noirrit: var(--font-noirrit);
 }
 
 body {
-  font-family: var(--font-nunito), Arial, Helvetica, sans-serif;
+  font-family:
+    var(--font-nunito), var(--font-noirrit), Arial, Helvetica, sans-serif;
 }
 
 button {
@@ -23,13 +25,8 @@ button {
 }
 
 .max-width {
-  max-width: 1200px;
+  max-width: 1232px;
+  padding-inline: 16px;
   margin-inline: auto;
   width: 100%;
-}
-
-@media (max-width: 768px) {
-  .max-width {
-    padding-inline: 1rem;
-  }
 }

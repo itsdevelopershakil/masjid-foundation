@@ -1,19 +1,21 @@
 "use client";
-import { useState } from "react";
+import { useAppContext } from "../context/AppContext";
 
 const LanguageButtons = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState("eng");
+  const { selectedLanguage, setLanguage } = useAppContext();
   return (
-    <div className="rounded-md border border-[#20665C]/20 flex overflow-clip">
+    <div className="rounded-md border border-[#20665C]/20 overflow-clip hidden sm:flex">
       <button
-        className={`px-3 py-1.5 font-philosopher h-full ${selectedLanguage === "eng" ? "bg-primary text-container" : "bg-transparent text-text"}`}
-        onClick={() => setSelectedLanguage("eng")}
+        type="button"
+        className={`px-2.5 py-1.5 h-full ${selectedLanguage === "eng" ? "bg-primary text-container" : "bg-transparent text-text"} font-philosopher`}
+        onClick={() => setLanguage("eng")}
       >
-        Eng
+        ENG
       </button>
       <button
-        className={`px-3 py-1.5 h-full ${selectedLanguage === "bn" ? "bg-primary text-container" : "bg-transparent text-text"}`}
-        onClick={() => setSelectedLanguage("bn")}
+        type="button"
+        className={`px-2.5 py-1.5 h-full ${selectedLanguage === "bn" ? "bg-primary text-container" : "bg-transparent text-text"}`}
+        onClick={() => setLanguage("bn")}
       >
         বাংলা
       </button>

@@ -1,0 +1,38 @@
+export const footerLinks = {
+  eng: [
+    { id: 1, name: "Homepage", link: "/" },
+    { id: 2, name: "Prayer Times", link: "/" },
+    { id: 3, name: "About Us", link: "/" },
+    { id: 4, name: "Privacy Policy", link: "/" },
+    { id: 5, name: "Terms & Condition", link: "/" },
+  ],
+  bn: [
+    { id: 1, name: "হোমপেজ", link: "/" },
+    { id: 2, name: "নামাজের সময়সূচি", link: "/" },
+    { id: 3, name: "আমাদের সম্পর্কে", link: "/" },
+    { id: 4, name: "গোপনীয়তা নীতি", link: "/" },
+    { id: 5, name: "পরিষেবার শর্তাবলী", link: "/" },
+  ],
+};
+export const sidebarLinks = {
+  eng: [
+    { id: 1, name: "Home", link: "/" },
+    { id: 2, name: "Prayer Times", link: "/" },
+    { id: 3, name: "Donate Now", link: "/" },
+    { id: 4, name: "About Us", link: "/" },
+    { id: 5, name: "Gallery", link: "/" },
+    { id: 6, name: "Contact", link: "/" },
+    { id: 7, name: "Privacy Policy", link: "/" },
+    { id: 8, name: "Terms & Condition", link: "/" },
+  ],
+  bn: [
+    { id: 1, name: "হোমপেজ", link: "/" },
+    { id: 2, name: "নামাজের সময়সূচী", link: "/" },
+    { id: 3, name: "দান করুণ", link: "/" },
+    { id: 4, name: "আমাদের সম্পর্কে", link: "/" },
+    { id: 5, name: "গ্যালারী", link: "/" },
+    { id: 6, name: "যোগাযোগ", link: "/" },
+    { id: 7, name: "গোপনীয়তার নীতি", link: "/" },
+    { id: 8, name: "পরিসেবার শর্তাবলী", link: "/" },
+  ],
+};

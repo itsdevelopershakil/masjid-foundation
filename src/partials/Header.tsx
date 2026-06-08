@@ -1,27 +1,38 @@
+import LogoBangla from "@/public/logo-bangla.png";
 import Logo from "@/public/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import LanguageButtons from "../components/LanguageButtons";
 import PrimaryButton from "../components/PrimaryButton";
+import ToggleMenuButton from "../components/ToggleMenuButton";
+import { getLanguage } from "../lib/getLanguage";
+import SidePanel from "./SidePanel";
 
-const Header = () => {
+const Header = async () => {
+  const language = await getLanguage();
   return (
-    <header className="py-5 max-width flex justify-between items-center">
-      <Link href="/">
-        <Image
-          src={Logo}
-          alt="Logo"
-          width={150}
-          height={50}
-          className="object-contain"
-        />
-      </Link>
-      <div className="flex items-center gap-5">
-        <LanguageButtons />
-        <PrimaryButton link="/" className="px-3 py-1.5">
-          Want to visit !
-        </PrimaryButton>
+    <header className="py-5 sticky top-0 z-10 bg-container border-b border-primary/20">
+      <div className="max-width flex justify-between items-center">
+        <Link href="/">
+          <div className="relative w-30 sm:w-37.5 h-10">
+            <Image
+              src={language === "bn" ? LogoBangla : Logo}
+              alt="Logo"
+              fill
+              sizes="120px (max-width: 640px) 150px"
+              className="object-contain"
+            />
+          </div>
+        </Link>
+        <div className="flex items-center gap-3 sm:gap-5">
+          <LanguageButtons />
+          <PrimaryButton link="/" className="px-3 py-1.5">
+            {language === "bn" ? "মসজিদে আসতে চান !" : "Want to visit !"}
+          </PrimaryButton>
+          <ToggleMenuButton />
+        </div>
       </div>
+      <SidePanel />
     </header>
   );
 };
