@@ -5,6 +5,7 @@ interface BlessingCardProps {
   data: {
     id: number | string;
     icon: string;
+    iconAlt: string;
     title: string;
     description: string;
     source: string;
@@ -20,7 +21,7 @@ const BlessingCard: React.FC<BlessingCardProps> = async ({ data }) => {
       className="p-5 border border-primary/20 rounded-xl bg-container flex flex-col items-center gap-4"
     >
       <div className="flex items-center justify-center size-18 bg-bg border border-primary/20 rounded-full">
-        <Image src={data.icon} alt={data.title} />
+        <Image src={data.icon} alt={data.iconAlt} />
       </div>
       <h3
         className={`text-xl font-bold ${titleFont} text-secondary text-center`}
