@@ -44,7 +44,7 @@ const noirrit = localFont({
       style: "normal",
     },
     {
-      path: "../assets/fonts/Li_Ador_Noirrit_Semibold.ttf",
+      path: "../assets/fonts/Li_Ador_Noirrit_SemiBold.ttf",
       weight: "600",
       style: "normal",
     },
