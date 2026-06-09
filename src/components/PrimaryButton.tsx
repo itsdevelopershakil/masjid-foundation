@@ -15,7 +15,7 @@ const PrimaryButton = async ({
   return (
     <Link
       href={link}
-      className={`text-xs sm:text-base bg-primary hover:bg-hover duration-300 text-container rounded-md ${language === "bn" ? "font-noirrit" : "font-philosopher font-bold"} ${className}`}
+      className={`text-xs sm:text-base bg-primary hover:bg-hover duration-300 inline-flex text-container rounded-md ${language === "bn" ? "font-noirrit" : "font-philosopher font-bold"} ${className}`}
     >
       {children}
     </Link>

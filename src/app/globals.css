@@ -13,11 +13,13 @@
   --font-philosopher: var(--font-philosopher);
   --font-nunito: var(--font-nunito);
   --font-noirrit: var(--font-noirrit);
+  --font-amiri: var(--font-amiri);
 }
 
 body {
   font-family:
-    var(--font-nunito), var(--font-noirrit), Arial, Helvetica, sans-serif;
+    var(--font-nunito), var(--font-amiri), var(--font-noirrit), Arial,
+    Helvetica, sans-serif;
 }
 
 button {

@@ -1,7 +1,7 @@
 import Footer from "@/src/partials/Footer";
 import Header from "@/src/partials/Header";
 import type { Metadata } from "next";
-import { Nunito, Philosopher } from "next/font/google";
+import { Amiri, Nunito, Philosopher } from "next/font/google";
 import localFont from "next/font/local";
 import { cookies } from "next/headers";
 import FixedLanguageBox from "../components/FixedLanguageBox";
@@ -17,6 +17,12 @@ export const philosopher = Philosopher({
 const nunito = Nunito({
   weight: ["400", "500", "600", "700"],
   variable: "--font-nunito",
+  subsets: ["latin"],
+});
+
+const amiri = Amiri({
+  weight: ["400", "700"],
+  variable: "--font-amiri",
   subsets: ["latin"],
 });
 
@@ -62,7 +68,7 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`${philosopher.variable} ${nunito.variable} ${noirrit.variable} h-full antialiased bg-bg`}
+      className={`${philosopher.variable} ${nunito.variable} ${noirrit.variable} ${amiri.variable} h-full antialiased bg-bg`}
     >
       <body className="min-h-full flex flex-col">
         <AppProvider initialLanguage={language}>
