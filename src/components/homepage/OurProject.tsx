@@ -8,7 +8,7 @@ const OurProject = async () => {
 
   const titleFont = language === "bn" ? "font-noirrit" : "font-philosopher";
   return (
-    <div className="py-15 md:py-20">
+    <div className="pt-15 md:pt-20">
       <div className="max-width">
         <div className="flex flex-wrap md:flex-nowrap items-start gap-5 md:gap-7.5">
           <div className="w-full md:w-1/2">
