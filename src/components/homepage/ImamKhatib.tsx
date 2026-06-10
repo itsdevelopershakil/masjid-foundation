@@ -30,12 +30,12 @@ const ImamKhatib = async () => {
             <Image
               src={Imam}
               alt="Imam Image"
-              className="rounded-xl shadow-main w-full max-h-70 object-cover shrink-0"
+              className="rounded-xl shadow-main w-full max-w-55 sm:max-w-60 h-60 sm:h-70 object-cover shrink-0"
             />
-            <h3 className={`font-bold text-xl ${titleFont}`}>
-              {language === "bn" ? "মাসুম আহমদ" : "Mawlana Masum Ahmed"}
+            <h3 className={`font-bold text-xl text-center ${titleFont}`}>
+              {language === "bn" ? "মাওলানা মাসুম আহমদ" : "Mawlana Masum Ahmed"}
             </h3>
-            <p className="font-medium text-sm">
+            <p className="font-medium text-sm text-center">
               {language === "bn" ? "ইমাম ও খতিব" : "Imam & Khatib"}
             </p>
           </div>
