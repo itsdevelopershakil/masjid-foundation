@@ -19,7 +19,7 @@ const HeroSection = async () => {
         className={`pt-2.5 text-[32px] sm:text-[48px] font-bold ${language === "bn" ? "font-noirrit" : "font-philosopher"} text-start sm:text-center`}
       >
         {language === "eng"
-          ? "A Place of Worship, Guidance &amp; Community"
+          ? "A Place of Worship, Guidance & Community"
           : "ইবাদত, জ্ঞান ও ঐক্যের এক পবিত্র কেন্দ্র"}
       </h1>
 
@@ -31,7 +31,7 @@ const HeroSection = async () => {
           : "আল্লাহর স্মরণে আমাদের সঙ্গে যুক্ত হোন, দ্বীনের উপকারী জ্ঞান অর্জন করুন এবং ঈমান, ভ্রাতৃত্ব ও মানবসেবার মাধ্যমে গড়ে উঠা একটি প্রাণবন্ত মুসলিম সম্প্রদায়ের অংশ হয়ে উঠুন।"}
       </p>
       <button
-        className={`mt-7.5 bg-secondary font-bold ${language === "bn" ? "font-noirrit" : "font-philosopher"} py-1.5 px-3 rounded-md w-full sm:w-auto`}
+        className={`mt-7.5 bg-secondary hover:bg-hover2 duration-300 font-bold ${language === "bn" ? "font-noirrit" : "font-philosopher"} py-1.5 px-3 rounded-md w-full sm:w-auto`}
       >
         {language === "eng" ? "Donate Now" : "সাদকায়ে জারিয়ায় অংশ নিন"}
       </button>
