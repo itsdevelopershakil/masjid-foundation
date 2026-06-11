@@ -6,7 +6,7 @@ const ImamKhatib = async () => {
   const language = await getLanguage();
   const titleFont = language === "bn" ? "font-noirrit" : "font-philosopher";
   return (
-    <div className="pt-15 md:pt-20">
+    <section className="pt-15 md:pt-20">
       <div className="max-width">
         <div className="flex flex-col gap-6 items-center">
           <h1
@@ -41,7 +41,7 @@ const ImamKhatib = async () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
