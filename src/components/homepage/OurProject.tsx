@@ -1,4 +1,4 @@
-import ProjectImage from "@/public/our-project-img.png";
+import ProjectImage from "@/public/our-project.png";
 import { getLanguage } from "@/src/lib/getLanguage";
 import Image from "next/image";
 import PrimaryButton from "../PrimaryButton";
@@ -15,7 +15,7 @@ const OurProject = async () => {
             <Image
               src={ProjectImage}
               alt="Our Project"
-              className="w-full max-h-109 object-cover rounded-[20px]"
+              className="w-full max-h-109 object-cover rounded-[20px] block border border-primary/20"
             />
           </div>
           <div className="w-full md:w-1/2">

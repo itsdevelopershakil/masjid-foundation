@@ -1,33 +1,48 @@
 import backgroundImage from "@/public/images/hero.png";
 import { getLanguage } from "@/src/lib/getLanguage";
+import React from "react";
 
-const MainSection = async () => {
-    const language = await getLanguage();
-    return (
-        <section
-            className="bg-cover bg-top bg-no-repeat min-h-75 flex flex-col items-center justify-center sm:text-center text-white p-4"
-            style={{ backgroundImage: `url(${backgroundImage.src})` }}
+interface MainSectionProps {
+  titleEng: string;
+  titleBn: string;
+  descEng?: string;
+  descBn?: string;
+}
+
+const MainSection: React.FC<MainSectionProps> = async ({
+  titleEng,
+  titleBn,
+  descEng,
+  descBn,
+}) => {
+  const language = await getLanguage();
+  return (
+    <section
+      className="bg-cover bg-no-repeat min-h-75 flex flex-col items-center justify-center sm:text-center text-white p-4 relative"
+      style={{
+        backgroundImage: `url(${backgroundImage.src})`,
+        backgroundPosition: "center -400px",
+      }}
+    >
+      <div className="absolute top-0 left-0 w-full h-full bg-black/70 z-0"></div>
+      <div className="relative z-1">
+        <h1
+          className={`pt-2.5 text-2xl sm:text-3xl md:text-5xl font-bold ${language === "bn" ? "font-noirrit" : "font-philosopher"} text-start sm:text-center`}
         >
-            <h1
-                className={`pt-2.5 text-2xl sm:text-3xl md:text-5xl font-bold ${language === "bn" ? "font-noirrit" : "font-philosopher"} text-start sm:text-center`}
-            >
-                {language === "eng"
-                    ? "Baitul Haque Jame Masjid"
-                    : "বাইতুল হক্ব জামে মসজিদ"}
-            </h1>
+          {language === "eng" ? titleEng : titleBn}
+        </h1>
 
-            <p
-                className={`pt-4 ${language === "eng" ? "font-semibold" : ""}  text-center text-sm`}
-                dangerouslySetInnerHTML={{
-                    __html: `${
-                        language === "eng"
-                            ? "A blessed house of Allah, dedicated to prayer, learning, unity, and serving the community <br class='hidden md:block' /> with faith and compassion."
-                            : "আল্লাহর একটি বরকতময় ঘর, যেখানে মানুষ একত্রিত হয় ইবাদতের জন্য, দ্বীনি জ্ঞান অর্জনের জন্য, <br/> এবং ভালোবাসা ও সহমর্মিতার মাধ্যমে একটি শক্তিশালী ও শান্তিপূর্ণ সমাজ গড়ে তোলার জন্য।"
-                    }`,
-                }}
-            ></p>
-        </section>
-    );
+        {descEng && descBn && (
+          <p
+            className={`pt-4 ${language === "eng" ? "font-semibold" : ""}  text-center text-sm`}
+            dangerouslySetInnerHTML={{
+              __html: `${language === "eng" ? descEng : descBn}`,
+            }}
+          ></p>
+        )}
+      </div>
+    </section>
+  );
 };
 
 export default MainSection;

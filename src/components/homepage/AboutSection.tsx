@@ -1,4 +1,4 @@
-import AboutImg from "@/public/images/about-img.jpg";
+import AboutImg from "@/public/images/about-img.jpeg";
 import { getLanguage } from "@/src/lib/getLanguage";
 import Image from "next/image";
 import PrimaryButton from "../PrimaryButton";
@@ -11,7 +11,7 @@ const AboutSection = async () => {
       <div className="md:w-1/2">
         <Image
           src={AboutImg}
-          className="w-full max-h-61 sm:max-h-109 object-cover rounded-[20px]"
+          className="w-full max-h-61 sm:max-h-109 object-cover rounded-[20px] block border border-primary/20"
           alt=""
         />
       </div>
