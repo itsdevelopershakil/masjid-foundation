@@ -42,7 +42,7 @@ const FivePiller = async () => {
               ? " The declaration of faith: “There is no God but Allah, and Muhammad (S:) is His messenger,” signifying total devotion."
               : "“আল্লাহ ছাড়া কোনো উপাস্য নেই এবং মুহাম্মদ ﷺ তাঁর রাসূল” — এই সাক্ষ্য প্রদানের মাধ্যমে একজন মুসলমান আল্লাহর প্রতি পূর্ণ বিশ্বাস, আনুগত্য ও আত্মসমর্পণের অঙ্গীকার করে।"}
           </p>
-          <ul className="mt-4 list-disc px-4 marker:text-secondary text-sm font-nunito text-primary">
+          <ul className="mt-4 list-disc px-4 marker:text-secondary text-sm text-primary">
             <li>
               {language === "eng"
                 ? "Absolute Monotheism"
@@ -51,7 +51,7 @@ const FivePiller = async () => {
             <li>
               {language === "eng"
                 ? "AIntentionality (Niyyah)"
-                : "তাওহীদে বিশ্বাস (একত্ববাদ)"}
+                : "উদ্দেশ্য ও আন্তরিক সংকল্প (নিয়ত)"}
             </li>
           </ul>
         </div>
