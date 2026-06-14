@@ -29,7 +29,7 @@ const PrayerCard: React.FC<PrayerCardProps> = ({ data, language }) => {
         {data.name}
       </h3>
       <p
-        className={`flex justify-between items-center ${language === "bn" ? "font-noirrit" : "font-philosopher"} text-xs lg:text-sm sm:gap-x-5 lg:gap-x-10 w-full`}
+        className={`flex justify-between items-center ${language === "bn" ? "font-noirrit" : "font-philosopher"} text-xs lg:text-sm w-full`}
       >
         <span>{language === "bn" ? "ওয়াক্ত আরম্ভ" : "Waqt Starts"}</span>
         <span className={language === "bn" ? "font-semibold" : "font-bold"}>
@@ -37,7 +37,7 @@ const PrayerCard: React.FC<PrayerCardProps> = ({ data, language }) => {
         </span>
       </p>
       <p
-        className={`flex justify-between items-center ${language === "bn" ? "font-noirrit" : "font-philosopher"} text-xs lg:text-sm sm:gap-x-5 lg:gap-x-10 w-full`}
+        className={`flex justify-between items-center ${language === "bn" ? "font-noirrit" : "font-philosopher"} text-xs lg:text-sm w-full`}
       >
         <span>{language === "bn" ? "ওয়াক্ত শেষ" : "Waqt Ends"}</span>
         <span className={language === "bn" ? "font-semibold" : "font-bold"}>
