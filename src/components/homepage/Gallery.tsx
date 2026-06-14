@@ -53,6 +53,7 @@ export default function Gallery() {
                     src={image}
                     alt={`Gallery ${index + 1}`}
                     fill
+                    sizes="(max-width: 768px) 100vw, 1200px"
                     className="object-cover"
                     priority={index === 0}
                   />
@@ -106,6 +107,7 @@ export default function Gallery() {
                         src={image}
                         alt={`Thumbnail ${index + 1}`}
                         fill
+                        sizes="(max-width: 768px) 120px, 180px"
                         className="cursor-pointer object-cover"
                       />
                     </div>
