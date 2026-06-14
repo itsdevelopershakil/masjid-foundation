@@ -1,4 +1,5 @@
 import Bkash from "@/public/icons/bkash.svg";
+import PubaliBank from "@/public/icons/pubaliBank.svg";
 import { getLanguage } from "@/src/lib/getLanguage";
 import Image from "next/image";
 import { CopyButton } from "./CopyButton";
@@ -6,7 +7,7 @@ import { CopyButton } from "./CopyButton";
 const DonateSection = async () => {
     const language = await getLanguage();
     return (
-        <section className="max-width flex flex-col gap-20 my-20">
+        <section className="max-width hidden md:flex flex-col gap-20 my-20">
             <div className="flex flex-col lg:flex-row gap-7.5 shrink-0">
                 {/* Left side  */}
                 <div className="flex flex-col gap-6 w-full lg:w-1/2">
@@ -104,7 +105,7 @@ const DonateSection = async () => {
                                     <span className="block size-1.5 bg-secondary rounded-full"></span>
                                     <p>
                                         {language === "eng"
-                                            ? "Please include your name as reference."
+                                            ? `Please enter your name as a reference. If you wish to remain anonymous, enter "Donate to BHJM" instead.`
                                             : "অনুগ্রহ করে রেফারেন্স হিসেবে আপনার নাম উল্লেখ করুন।"}
 
                                         <span className="text-red-500">*</span>
@@ -115,7 +116,107 @@ const DonateSection = async () => {
                     </div>
                 </div>
             </div>
-            <div>div2</div>
+            <div className="hidden md:flex gap-10 justify-around items-center p-10 bg-container max-width border border-primary/10 rounded-[20px]">
+                <div className="">
+                    <div className="flex flex-col gap-2 items-center leading-8.5">
+                        <Image
+                            src={PubaliBank}
+                            className="size-24 lg:size-30"
+                            alt=""
+                        />
+                        <h4
+                            className={`text-xl lg:text-2xl ${language === "eng" ? "font-philosopher" : "font-noirrit"} font-bold `}
+                        >
+                            {language === "eng"
+                                ? "Direct Bank Transfer"
+                                : "সরাসরি ব্যাংক ট্রান্সফার"}
+                        </h4>
+                        <p
+                            className={` text-center ${language === "eng" ? "font-semibold max-w-59.25" : "max-w-70"} text-sm lg:text-base`}
+                        >
+                            {language === "eng"
+                                ? "For large Donations or overseas wire transfer."
+                                : "বড় অঙ্কের অনুদান বা বিদেশ থেকে ব্যাংক ট্রান্সফারের মাধ্যমে দান করতে আগ্রহীদের জন্য।"}
+                        </p>
+                    </div>
+                </div>
+                <div className="h-60 w-px bg-gray-300"></div>
+                <div className=" lg:text-2xl lg:leading-8.5">
+                    <div className="flex gap-12 font-philosopher ">
+                        <div className="flex flex-col gap-6 shrink-0">
+                            <div className="flex flex-col gap-2">
+                                <h4
+                                    className={`${language === "bn" && "font-noirrit"}`}
+                                >
+                                    {language === "eng" ? "Bank" : "ব্যাংক"}
+                                </h4>
+                                <p className="font-bold">Pubali Bank PLC</p>
+                            </div>
+                            <div className="flex flex-col gap-2 pt-6 lg:pt-0">
+                                <h4
+                                    className={`${language === "bn" && "font-noirrit"}`}
+                                >
+                                    {language === "eng" ? "Branch" : "শাখা"}
+                                </h4>
+                                <p className="font-bold">Hetimgonj, Sylhet</p>
+                            </div>
+                            <div className="flex flex-col gap-2">
+                                <h4
+                                    className={`${language === "bn" && "font-noirrit"}`}
+                                >
+                                    {language === "eng"
+                                        ? "Routing Number"
+                                        : "রাউটিং নম্বর"}
+                                </h4>
+                                <p className="font-bold">175911758</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="flex flex-col gap-6">
+                                <div className="flex flex-col gap-2 w-[90%] lg:w-full">
+                                    <h4
+                                        className={`${language === "bn" && "font-noirrit"}`}
+                                    >
+                                        {language === "eng"
+                                            ? "Account Name"
+                                            : "অ্যাকাউন্টের নাম"}
+                                    </h4>
+                                    <p className="font-bold">
+                                        Baitul Haque Jame Masjid Kushumbag
+                                    </p>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <h4
+                                        className={`${language === "bn" && "font-noirrit"}`}
+                                    >
+                                        {language === "eng"
+                                            ? "Account Number"
+                                            : "অ্যাকাউন্ট নম্বর"}
+                                    </h4>
+                                    <p className="font-bold">4327101045456</p>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <h4
+                                        className={`${language === "bn" && "font-noirrit"}`}
+                                    >
+                                        {language === "eng"
+                                            ? "Swift Code"
+                                            : "সুইফ্ট কোড"}
+                                    </h4>
+                                    <p className="font-bold">PUBABDDH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p className="text-sm mt-2">
+                        {language === "eng"
+                            ? "Please include your name as reference."
+                            : "অনুগ্রহ করে রেফারেন্স হিসেবে আপনার নাম উল্লেখ করুন।*"}
+
+                        <span className="text-red-500">*</span>
+                    </p>
+                </div>
+            </div>
         </section>
     );
 };
