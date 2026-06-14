@@ -34,34 +34,28 @@ button {
   width: 100%;
 }
 
-.image-gallery-slide img {
-  width: 100% !important;
-  /* height: 450px; */
-  object-fit: cover;
-  border-radius: 12px;
+.swiper-button-prev,
+.swiper-button-next {
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 9999px;
+  border: 1px solid #d1d5db;
+  color: #0f766e;
 }
 
-.image-gallery-thumbnail {
-  border-radius: 8px;
-  overflow: hidden;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 12px;
+  font-weight: 700;
 }
 
-.image-gallery-thumbnail-img {
-  height: 80px !important;
-  object-fit: cover;
+.gallery-thumbs .swiper-slide {
+  opacity: 0.5;
+  transition: all 0.3s ease;
 }
 
-.image-gallery-thumbnail.active,
-.image-gallery-thumbnail:focus {
-  border: 3px solid #0f766e !important;
+/* Active thumbnail */
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
 }
-
-/* @media (max-width: 768px) {
-  .image-gallery-slide img {
-    height: 220px;
-  }
-
-  .image-gallery-thumbnail img {
-    height: 60px;
-  }
-} */
