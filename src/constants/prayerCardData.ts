@@ -53,7 +53,7 @@ export const prayerCardData = {
     {
       id: 2,
       symbol: "ظهر",
-      name: "DOHR",
+      name: "DUHR",
       startTime: "03 : 50",
       endTime: "03 : 50",
       isActive: false,
