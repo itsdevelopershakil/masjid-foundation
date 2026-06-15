@@ -13,7 +13,7 @@ const DonateSection = async () => {
                 <div className="flex flex-col gap-6 w-full lg:w-1/2">
                     <div className="shadow-main rounded-[20px] mx-auto w-full md:w-[70%] lg:w-full shrink-0">
                         <iframe
-                            src="https://www.youtube.com/embed/2htwraXnMWI?si=qqd0CGMGk0wjkLY7"
+                            src="https://www.youtube.com/embed/HKsEkmrlwEc?si=9Ut-NhN0yQ7mW9rK"
                             title="YouTube video player"
                             frameBorder={0}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
