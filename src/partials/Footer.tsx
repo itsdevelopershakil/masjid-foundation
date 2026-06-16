@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
+import ScrollButton from "../components/ScrollButton";
 import { footerLinks } from "../constants/navLinks";
 import { getLanguage } from "../lib/getLanguage";
 import { toBengaliNumbers } from "../lib/toBengaliNumbers";
@@ -28,7 +29,7 @@ const Footer = async () => {
             serving the community with faith and compassion.`}
           </p>
           <Link
-            href="/"
+            href="/donate"
             className="py-2 px-4 bg-primary hover:bg-hover duration-300 rounded-md text-container font-bold flex items-center justify-center gap-2 md:max-w-52 lg:max-w-full"
           >
             <span>{language === "bn" ? "এখনই দান করুন" : "Donate Now"}</span>
@@ -48,12 +49,16 @@ const Footer = async () => {
           <ul className="flex flex-col gap-2 sm:gap-4">
             {footerLinks[language].map((link) => (
               <li key={link.id}>
-                <Link
-                  href={link.link}
-                  className="font-semibold text-text hover:text-secondary duration-300"
-                >
-                  {link.name}
-                </Link>
+                {link.scrollId && link.scrollId.length > 0 ? (
+                  <ScrollButton label={link.name} scrollId={link.scrollId} />
+                ) : (
+                  <Link
+                    href={link.link}
+                    className="font-semibold text-text hover:text-secondary duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -86,10 +91,10 @@ const Footer = async () => {
                 className="size-5 object-contain"
               />
               <Link
-                href="mailto:info@example.com"
+                href="mailto:info.bhjmk@gmail.com"
                 className="font-semibold text-text hover:text-secondary duration-300"
               >
-                info@example.com
+                info.bhjmk@gmail.com
               </Link>
             </li>
             <li className="flex items-center gap-5">

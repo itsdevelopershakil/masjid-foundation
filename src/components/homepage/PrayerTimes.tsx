@@ -6,7 +6,7 @@ const PrayerTimes = async () => {
   const language = await getLanguage();
   const titleFont = language === "bn" ? "font-noirrit" : "font-philosopher";
   return (
-    <section className="max-width">
+    <section className="max-width scroll-mt-24" id="prayertimes">
       <div className="flex flex-col gap-3 md:gap-5 py-4 px-2 sm:p-10 bg-container border border-primary/10 rounded-xl">
         <div className="flex flex-col gap-4 items-center">
           <h1

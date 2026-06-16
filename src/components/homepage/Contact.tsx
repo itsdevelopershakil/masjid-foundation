@@ -83,12 +83,12 @@ const Contact = async () => {
                 <p
                   className={`${language === "bn" ? "font-semibold" : "font-medium"} text-sm leading-6 text-center text-text`}
                 >
-                  info@example.com
+                  info.bhjmk@gmail.com
                 </p>
                 <p
                   className={`${language === "bn" ? "font-semibold" : "font-medium"} text-sm leading-6 text-center text-text`}
                 >
-                  info@example.com
+                  baitulhaque2024@gmail.com
                 </p>
               </div>
             </div>

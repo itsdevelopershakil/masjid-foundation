@@ -68,7 +68,7 @@ const OurProject = async () => {
                 </p>
                 <div>
                   <PrimaryButton
-                    link={"/"}
+                    link={"/donate"}
                     className="py-1.5 px-3 sm:py-2 sm:px-4 text-sm! sm:text-base!"
                   >
                     {language === "bn"

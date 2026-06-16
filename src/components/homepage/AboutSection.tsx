@@ -7,7 +7,10 @@ const AboutSection = async () => {
   const language = await getLanguage();
   const titleFont = language === "bn" ? "font-noirrit" : "font-philosopher";
   return (
-    <section className="flex md:flex-row flex-col gap-7.5 max-width py-15 md:py-20">
+    <section
+      className="flex md:flex-row flex-col gap-7.5 max-width py-15 md:py-20 scroll-mt-24"
+      id="about"
+    >
       <div className="md:w-1/2">
         <Image
           src={AboutImg}
@@ -41,7 +44,7 @@ const AboutSection = async () => {
 ইবাদতের স্থান হওয়ার পাশাপাশি, আমাদের মসজিদ পরিবার ও প্রতিবেশীদের মধ্যে সৌহার্দ্য ও ভ্রাতৃত্বের বন্ধন সুদৃঢ় করে। এটি এমন এক আধ্যাত্মিক কেন্দ্র, যা মানুষের হৃদয়ে ইসলামের শিক্ষা, নৈতিক মূল্যবোধ এবং সম্প্রদায়ের প্রতি দায়িত্ববোধকে আরও গভীরভাবে জাগ্রত করে।`,
           }}
         ></p>
-        <PrimaryButton link="" className="py-2 px-4">
+        <PrimaryButton link="/donate" className="py-2 px-4">
           {language === "eng" ? "Support Our Masjid" : "মসজিদের খেদমতে অংশ নিন"}
         </PrimaryButton>
       </div>

@@ -30,7 +30,7 @@ const BlessingSadaqah = async () => {
             ))}
           </div>
           <PrimaryButton
-            link="/"
+            link="/donate"
             className="px-3 sm:px-4 py-1.5 sm:py-2 text-sm! sm:text-base!"
           >
             {language === "bn" ? "এই বরকতময় কাজে শরিক হোন" : "Be Part of It"}

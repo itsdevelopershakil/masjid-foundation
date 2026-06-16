@@ -2,6 +2,7 @@ import BismillahImg from "@/public/images/Bismillah.svg";
 import backgroundImage from "@/public/images/hero.png";
 import { getLanguage } from "@/src/lib/getLanguage";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = async () => {
   const language = await getLanguage();
@@ -32,11 +33,12 @@ const HeroSection = async () => {
           ? "Join us in prayer, seek beneficial knowledge, and be part of a caring community dedicated to faith, compassion, and service for the sake of Allah."
           : "আল্লাহর স্মরণে আমাদের সঙ্গে যুক্ত হোন, দ্বীনের উপকারী জ্ঞান অর্জন করুন এবং ঈমান, ভ্রাতৃত্ব ও মানবসেবার মাধ্যমে গড়ে উঠা একটি প্রাণবন্ত মুসলিম সম্প্রদায়ের অংশ হয়ে উঠুন।"}
       </p>
-      <button
+      <Link
+        href={"/donate"}
         className={`mt-7.5 bg-secondary hover:bg-hover2 duration-300 font-bold ${language === "bn" ? "font-noirrit" : "font-philosopher"} py-1.5 px-3 rounded-md w-full sm:w-auto`}
       >
         {language === "eng" ? "Donate Now" : "সাদকায়ে জারিয়ায় অংশ নিন"}
-      </button>
+      </Link>
     </section>
   );
 };

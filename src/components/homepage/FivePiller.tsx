@@ -50,7 +50,7 @@ const FivePiller = async () => {
             </li>
             <li>
               {language === "eng"
-                ? "AIntentionality (Niyyah)"
+                ? "Intentionality (Niyyah)"
                 : "উদ্দেশ্য ও আন্তরিক সংকল্প (নিয়ত)"}
             </li>
           </ul>
