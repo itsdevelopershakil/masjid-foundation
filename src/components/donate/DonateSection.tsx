@@ -92,24 +92,65 @@ const DonateSection = async () => {
                         <div>
                             <ul className="leading-6">
                                 <li className="flex items-center gap-2.5">
-                                    <span className="block size-1.5 bg-secondary rounded-full"></span>
-                                    <p>
-                                        {language === "eng"
-                                            ? " Donate by choosing the Send Money option."
-                                            : "সেন্ড মানি অপশন থেকে পাঠাতে হবে।"}
+                                    <span className="block size-1.5 bg-secondary rounded-full shrink-0"></span>
 
-                                        <span className="text-red-500">*</span>
-                                    </p>
+                                    {language === "eng" ? (
+                                        <p>
+                                            Donate by choosing the{" "}
+                                            <span className="font-semibold">
+                                                Send Money
+                                            </span>{" "}
+                                            option.{" "}
+                                            <span className="text-red-500">
+                                                *
+                                            </span>
+                                        </p>
+                                    ) : (
+                                        <p>
+                                            সেন্ড মানি অপশন থেকে পাঠাতে হবে।
+                                            <span className="text-red-500">
+                                                *
+                                            </span>
+                                        </p>
+                                    )}
                                 </li>{" "}
-                                <li className="flex items-center gap-2.5">
-                                    <span className="block size-1.5 bg-secondary rounded-full"></span>
+                                <li className="flex gap-2.5">
+                                    <span className="block size-1.5 bg-secondary rounded-full shrink-0 mt-2"></span>
                                     <p>
                                         {language === "eng"
-                                            ? `Please enter your name as a reference. If you wish to remain anonymous, enter "Donate to BHJM" instead.`
+                                            ? `Please enter your name as a reference.`
                                             : "অনুগ্রহ করে রেফারেন্স হিসেবে আপনার নাম উল্লেখ করুন।"}
 
                                         <span className="text-red-500">*</span>
                                     </p>
+                                </li>
+                                <li className="flex gap-2.5">
+                                    <span className="block size-1.5 bg-secondary rounded-full shrink-0 mt-2"></span>
+
+                                    {language === "eng" ? (
+                                        <p>
+                                            If you wish to remain
+                                            anonymous,enter{" "}
+                                            <span className="font-semibold">
+                                                &quot;Donate to BHJM&quot;{" "}
+                                            </span>{" "}
+                                            instead.
+                                            <span className="text-red-500">
+                                                *
+                                            </span>
+                                        </p>
+                                    ) : (
+                                        <p>
+                                            আপনি যদি পরিচয় গোপন রাখতে চান, তাহলে{" "}
+                                            <span className="font-semibold">
+                                                “Donate to BHJM”
+                                            </span>{" "}
+                                            লিখুন।*
+                                            <span className="text-red-500">
+                                                *
+                                            </span>
+                                        </p>
+                                    )}
                                 </li>
                             </ul>
                         </div>

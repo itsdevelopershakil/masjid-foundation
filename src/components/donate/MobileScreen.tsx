@@ -96,7 +96,7 @@ const MobileScreenSection = async () => {
                     </li>
                     <li className="flex gap-4 leading-6">
                         <span className="block size-1.5 bg-secondary shrink-0 rounded-full mt-2"></span>
-                        <p className="leading-6">
+                        <div className="leading-6">
                             {language === "eng" ? (
                                 <p>
                                     If you wish to remain anonymous, enter
@@ -116,7 +116,7 @@ const MobileScreenSection = async () => {
                                     <span className="text-red-500">*</span>
                                 </p>
                             )}
-                        </p>
+                        </div>
                     </li>
                 </ul>
             </div>
