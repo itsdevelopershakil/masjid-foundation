@@ -35,7 +35,7 @@ const HeroSection = async () => {
       </p>
       <Link
         href={"/donate"}
-        className={`mt-7.5 bg-secondary hover:bg-hover2 duration-300 font-bold ${language === "bn" ? "font-noirrit" : "font-philosopher"} py-1.5 px-3 rounded-md w-full sm:w-auto`}
+        className={`mt-7.5 bg-secondary hover:bg-hover2 duration-300 text-center font-bold ${language === "bn" ? "font-noirrit" : "font-philosopher"} py-1.5 px-3 rounded-md w-full sm:w-auto`}
       >
         {language === "eng" ? "Donate Now" : "সাদকায়ে জারিয়ায় অংশ নিন"}
       </Link>

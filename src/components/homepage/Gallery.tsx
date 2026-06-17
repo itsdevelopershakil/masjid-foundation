@@ -21,7 +21,7 @@ export default function Gallery() {
   const titleFont = language === "bn" ? "font-noirrit" : "font-philosopher";
 
   return (
-    <section className="pt-15 md:pt-20">
+    <section className="pt-15 md:pt-20 scroll-mt-10" id="gallery">
       <div className="max-width">
         <div className="flex flex-col items-center gap-6">
           <h1

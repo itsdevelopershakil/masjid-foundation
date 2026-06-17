@@ -8,6 +8,7 @@ import { IoClose } from "react-icons/io5";
 import { sidebarLinks } from "../constants/navLinks";
 import { useAppContext } from "../context/AppContext";
 import useOutsideClick from "../hooks/useOutsideClick";
+import { scrollTo } from "../lib/scrollTo";
 
 const SidePanel = () => {
   const { selectedLanguage, toggleMenu, setToggleMenu } = useAppContext();
@@ -46,9 +47,21 @@ const SidePanel = () => {
         >
           {sidebarLinks[selectedLanguage].map((link) => (
             <li key={link.id}>
-              <Link href={link.link} onClick={() => setToggleMenu(false)}>
-                {link.name}
-              </Link>
+              {link.scrollId && link.scrollId.length > 0 ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    scrollTo(link.scrollId);
+                    setToggleMenu(false);
+                  }}
+                >
+                  {link.name}
+                </button>
+              ) : (
+                <Link href={link.link} onClick={() => setToggleMenu(false)}>
+                  {link.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

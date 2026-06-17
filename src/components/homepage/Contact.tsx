@@ -9,7 +9,7 @@ const Contact = async () => {
   const language = await getLanguage();
   const titleFont = language === "bn" ? "font-noirrit" : "font-philosopher";
   return (
-    <section className="pt-15 md:pt-20">
+    <section className="pt-15 md:pt-20 scroll-mt-10" id="contact">
       <div className="max-width">
         <div className="flex flex-col gap-6 items-center">
           <h1
