@@ -2,9 +2,9 @@
 import LogoBangla from "@/public/logo-bangla.png";
 import Logo from "@/public/logo.png";
 import Image from "next/image";
-import Link from "next/link";
 import { useRef } from "react";
 import { IoClose } from "react-icons/io5";
+import ScrollLink from "../components/ScrollLink";
 import { sidebarLinks } from "../constants/navLinks";
 import { useAppContext } from "../context/AppContext";
 import useOutsideClick from "../hooks/useOutsideClick";
@@ -58,9 +58,12 @@ const SidePanel = () => {
                   {link.name}
                 </button>
               ) : (
-                <Link href={link.link} onClick={() => setToggleMenu(false)}>
+                <ScrollLink
+                  href={link.link}
+                  onClick={() => setToggleMenu(false)}
+                >
                   {link.name}
-                </Link>
+                </ScrollLink>
               )}
             </li>
           ))}

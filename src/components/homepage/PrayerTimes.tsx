@@ -1,10 +1,12 @@
-import { prayerCardData } from "@/src/constants/prayerCardData";
+import { getPrayerCardData } from "@/src/constants/prayerCardData";
 import { getLanguage } from "@/src/lib/getLanguage";
+import { toBengaliNumbers } from "@/src/lib/toBengaliNumbers";
 import PrayerCard from "../PrayerCard";
 
 const PrayerTimes = async () => {
   const language = await getLanguage();
   const titleFont = language === "bn" ? "font-noirrit" : "font-philosopher";
+  const prayerCardData = await getPrayerCardData();
   return (
     <section className="max-width scroll-mt-24" id="prayertimes">
       <div className="flex flex-col gap-3 md:gap-5 py-4 px-2 sm:p-10 bg-container border border-primary/10 rounded-xl">
@@ -90,7 +92,9 @@ const PrayerTimes = async () => {
               <span
                 className={language === "bn" ? "font-semibold" : "font-bold"}
               >
-                {language === "bn" ? "০৫ : ১০" : "05 : 15"}
+                {language === "bn"
+                  ? toBengaliNumbers(prayerCardData.sunrise)
+                  : prayerCardData.sunrise}
               </span>
             </div>
             <div
@@ -100,7 +104,9 @@ const PrayerTimes = async () => {
               <span
                 className={language === "bn" ? "font-semibold" : "font-bold"}
               >
-                {language === "bn" ? "০৬ : ০৯" : "06 : 09"}
+                {language === "bn"
+                  ? toBengaliNumbers(prayerCardData.sunset)
+                  : prayerCardData.sunset}
               </span>
             </div>
           </div>

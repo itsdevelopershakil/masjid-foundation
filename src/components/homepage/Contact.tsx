@@ -56,15 +56,15 @@ const Contact = async () => {
                   className={`${language === "bn" ? "font-semibold" : "font-medium"} text-sm leading-6 text-center text-text`}
                 >
                   {language === "bn"
-                    ? "মোবাইল : +৮৮০ ১৭১২ ৩৪৫৬৭৮"
-                    : "Mobile : +880 1712 345678"}
+                    ? "মোবাইল : +৮৮০ ১৭১১ ৩৯৯৫৯১"
+                    : "Mobile : +880 1711 399591"}
                 </p>
                 <p
                   className={`${language === "bn" ? "font-semibold" : "font-medium"} text-sm leading-6 text-center text-text`}
                 >
                   {language === "bn"
-                    ? "মোবাইল : +৮৮০ ১৭১২ ৩৪৫৬৭৮"
-                    : "Mobile : +880 1712 345678"}
+                    ? "মোবাইল : +৪৪ ৭৭০৯ ৭২৬০৬৫"
+                    : "Mobile : +44 7709 726065"}
                 </p>
               </div>
             </div>

@@ -39,9 +39,7 @@ const AboutSection = async () => {
             __html:
               language === "eng"
                 ? `Our masjid is located in Kayestogram (Kushumbag), Hetimgonj, Golapganj, Sylhet, and was established on 26 July 2024 to serve as a house of Allah for the local Muslim community. It is a place where worshippers come together for prayer, remembrance of Allah, and spiritual growth in an atmosphere of peace, faith, and unity. <br /> More than a place of worship, the masjid is a spiritual home that brings families and neighbours together, strengthens the bonds of brotherhood, and inspires a deeper connection with Islam and the community.`
-                : `আমাদের মসজিদ সিলেটের গোলাপগঞ্জ উপজেলার হেতিমগঞ্জের কায়েস্তগ্রাম (কুসুমবাগ) এলাকায় অবস্থিত। ২৬ জুলাই ২০২৪ সালে প্রতিষ্ঠিত এই মসজিদটি স্থানীয় মুসলিম সম্প্রদায়ের জন্য আল্লাহর এক পবিত্র ঘর হিসেবে গড়ে উঠেছে। এটি এমন একটি স্থান, যেখানে মুসল্লিরা নামাজ আদায়, আল্লাহর স্মরণ এবং আত্মিক উন্নয়নের মাধ্যমে শান্তি, ঈমান ও ঐক্যের আবহে একত্রিত হন।
-<br><br>
-ইবাদতের স্থান হওয়ার পাশাপাশি, আমাদের মসজিদ পরিবার ও প্রতিবেশীদের মধ্যে সৌহার্দ্য ও ভ্রাতৃত্বের বন্ধন সুদৃঢ় করে। এটি এমন এক আধ্যাত্মিক কেন্দ্র, যা মানুষের হৃদয়ে ইসলামের শিক্ষা, নৈতিক মূল্যবোধ এবং সম্প্রদায়ের প্রতি দায়িত্ববোধকে আরও গভীরভাবে জাগ্রত করে।`,
+                : `আমাদের মসজিদ সিলেটের গোলাপগঞ্জ উপজেলার হেতিমগঞ্জের কায়েস্তগ্রাম (কুসুমবাগ) এলাকায় অবস্থিত। ২৬ জুলাই ২০২৪ সালে প্রতিষ্ঠিত এই মসজিদটি স্থানীয় মুসলিম সম্প্রদায়ের জন্য ইবাদতের কেন্দ্রবিন্দু হিসেবে গড়ে উঠেছে। এটি এমন একটি স্থান, যেখানে মুসল্লিরা নামাজ আদায়, আল্লাহর স্মরণ এবং আত্মিক উন্নয়নের মাধ্যমে শান্তি, ঈমান ও ঐক্যের আবহে একত্রিত হন। <br><br> ইবাদতের স্থান হওয়ার পাশাপাশি, আমাদের মসজিদে দ্বীনি শিক্ষা প্রদান করা হয়,  যা মুসাল্লীগণের মধ্যে সৌহার্দ্য ও ভ্রাতৃত্বের বন্ধন সুদৃঢ় করে। এটি এমন এক আধ্যাত্মিক কেন্দ্র, যা মানুষের হৃদয়ে ইসলামের শিক্ষা, নৈতিক মূল্যবোধ এবং সম্প্রদায়ের প্রতি দায়িত্ববোধকে আরও গভীরভাবে জাগ্রত করে।`,
           }}
         ></p>
         <PrimaryButton link="/donate" className="py-2 px-4">

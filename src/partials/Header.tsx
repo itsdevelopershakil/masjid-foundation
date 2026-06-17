@@ -1,9 +1,9 @@
 import LogoBangla from "@/public/logo-bangla.png";
 import Logo from "@/public/logo.png";
 import Image from "next/image";
-import Link from "next/link";
 import LanguageButtons from "../components/LanguageButtons";
 import PrimaryButton from "../components/PrimaryButton";
+import ScrollLink from "../components/ScrollLink";
 import ToggleMenuButton from "../components/ToggleMenuButton";
 import { getLanguage } from "../lib/getLanguage";
 import SidePanel from "./SidePanel";
@@ -13,7 +13,7 @@ const Header = async () => {
   return (
     <header className="py-5 sticky top-0 z-10 bg-container border-b border-primary/20">
       <div className="max-width flex justify-between items-center">
-        <Link href="/">
+        <ScrollLink href="/">
           <div className="relative w-30 sm:w-37.5 h-10">
             <Image
               src={language === "bn" ? LogoBangla : Logo}
@@ -23,7 +23,7 @@ const Header = async () => {
               className="object-contain"
             />
           </div>
-        </Link>
+        </ScrollLink>
         <div className="flex items-center gap-3 sm:gap-5">
           <LanguageButtons />
           <PrimaryButton link="/" className="px-3 py-1.5">

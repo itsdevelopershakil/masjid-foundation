@@ -61,10 +61,8 @@ const OurProject = async () => {
                 )}
                 <p className="font-medium leading-6.5 text-text">
                   {language === "bn"
-                    ? `৩০০+ মুসল্লির ধারণক্ষমতাসম্পন্ন এই মসজিদটি নামাজ আদায়, ওযু করার সুবিধা এবং ইসলামী শিক্ষা ও সামাজিক কল্যাণমূলক কার্যক্রমের জন্য একটি নিবেদিত স্থান হিসেবে গড়ে উঠবে, ইনশাআল্লাহ।`
-                    : `With capacity for 300+ worshippers, the masjid will provide
-                  space for salah, wudu facilities, and essential areas for
-                  Islamic education and community support, insha'Allah.`}
+                    ? `৩০০+ মুসল্লির ধারণক্ষমতাসম্পন্ন এই মসজিদটি নামাজ আদায় এবং ইসলামী শিক্ষা ও সামাজিক কল্যাণমূলক কার্যক্রমের জন্য একটি নিবেদিত স্থান হিসেবে গড়ে উঠবে, ইনশাআল্লাহ।`
+                    : `With capacity for 300+ worshippers, the masjid will provide space for salah and essential areas for Islamic education and community support, insha’Allah.`}
                 </p>
                 <div>
                   <PrimaryButton

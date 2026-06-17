@@ -7,6 +7,7 @@ import Link from "next/link";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
 import ScrollButton from "../components/ScrollButton";
+import ScrollLink from "../components/ScrollLink";
 import { footerLinks } from "../constants/navLinks";
 import { getLanguage } from "../lib/getLanguage";
 import { toBengaliNumbers } from "../lib/toBengaliNumbers";
@@ -52,12 +53,12 @@ const Footer = async () => {
                 {link.scrollId && link.scrollId.length > 0 ? (
                   <ScrollButton label={link.name} scrollId={link.scrollId} />
                 ) : (
-                  <Link
+                  <ScrollLink
                     href={link.link}
                     className="font-semibold text-text hover:text-secondary duration-300"
                   >
                     {link.name}
-                  </Link>
+                  </ScrollLink>
                 )}
               </li>
             ))}
@@ -100,19 +101,19 @@ const Footer = async () => {
             <li className="flex items-center gap-5">
               <IoCall className="text-primary text-base sm:text-lg" />
               <Link
-                href="tel:+8801712345678"
+                href="tel:+8801711399591"
                 className="font-semibold text-text hover:text-secondary duration-300"
               >
-                {language === "bn" ? "+৮৮০ ১৭১২ ৩৪৫৬৭৮" : "+880 1712 345678"}
+                {language === "bn" ? "+৮৮০ ১৭১১ ৩৯৯৫৯১" : "+880 1711 399591"}
               </Link>
             </li>
             <li className="flex items-center gap-5">
               <IoCall className="text-primary text-base sm:text-lg" />
               <Link
-                href="tel:+8801712345678"
+                href="tel:+447709726065"
                 className="font-semibold text-text hover:text-secondary duration-300"
               >
-                {language === "bn" ? "+৮৮০ ১৭১২ ৩৪৫৬৭৮" : "+880 1712 345678"}
+                {language === "bn" ? "+৪৪ ৭৭০৯ ৭২৬০৬৫" : "+44 7709 726065"}
               </Link>
             </li>
           </ul>
