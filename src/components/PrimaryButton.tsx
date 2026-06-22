@@ -1,36 +1,52 @@
-import Link from "next/link";
-import React from "react";
-import { getLanguage } from "../lib/getLanguage";
-import { scrollTo } from "../lib/scrollTo";
+"use client";
 
-const PrimaryButton = async ({
-  link,
-  children,
-  className,
-  scrollId,
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import React from "react";
+import { useAppContext } from "../context/AppContext";
+import { scrollTo, setPendingScroll } from "../lib/scrollTo";
+
+const PrimaryButton = ({
+    link,
+    children,
+    className,
+    scrollId,
 }: {
-  link: string;
-  children: React.ReactNode;
-  className?: string;
-  scrollId?: string;
+    link: string;
+    children: React.ReactNode;
+    className?: string;
+    scrollId?: string;
 }) => {
-  const language = await getLanguage();
-  return scrollId && scrollId.length > 0 ? (
-    <button
-      type="button"
-      onClick={() => scrollTo(scrollId)}
-      className={`text-xs sm:text-base bg-primary hover:bg-hover duration-300 inline-flex text-container rounded-md ${language === "bn" ? "font-noirrit" : "font-philosopher font-bold"} ${className}`}
-    >
-      {children}
-    </button>
-  ) : (
-    <Link
-      href={link}
-      className={`text-xs sm:text-base bg-primary hover:bg-hover duration-300 inline-flex text-container rounded-md ${language === "bn" ? "font-noirrit" : "font-philosopher font-bold"} ${className}`}
-    >
-      {children}
-    </Link>
-  );
+    const { selectedLanguage: language } = useAppContext();
+    const pathname = usePathname();
+    const router = useRouter();
+
+    const handleClick = () => {
+        if (scrollId) {
+            if (pathname === "/") {
+                scrollTo(scrollId);
+            } else {
+                setPendingScroll(scrollId);
+                router.push("/");
+            }
+        }
+    };
+    return scrollId && scrollId.length > 0 ? (
+        <button
+            type="button"
+            onClick={() => handleClick()}
+            className={`text-xs sm:text-base bg-primary hover:bg-hover duration-300 inline-flex text-container rounded-md ${language === "bn" ? "font-noirrit" : "font-philosopher font-bold"} ${className}`}
+        >
+            {children}
+        </button>
+    ) : (
+        <Link
+            href={link}
+            className={`text-xs sm:text-base bg-primary hover:bg-hover duration-300 inline-flex text-container rounded-md ${language === "bn" ? "font-noirrit" : "font-philosopher font-bold"} ${className}`}
+        >
+            {children}
+        </Link>
+    );
 };
 
 export default PrimaryButton;
