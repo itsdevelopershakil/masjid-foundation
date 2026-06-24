@@ -32,7 +32,7 @@ const DonateSection = async () => {
                                 : "ব্যয়ের খাত"}
                         </h4>
                         <div
-                            className={`pt-6 ${language === "eng" ? "font-medium" : ""} text-sm flex gap-2.5 items-center`}
+                            className={`pt-6 ${language === "eng" ? "font-medium font-nunito" : "font-noirrit"}  flex gap-2.5 items-center`}
                         >
                             <span className="size-2.5 bg-secondary block rounded-full"></span>
                             {language === "eng"
@@ -44,7 +44,9 @@ const DonateSection = async () => {
                 {/* Right Side  */}
                 <div className="w-full lg:w-1/2 flex flex-col gap-5 justify-between">
                     <div className="p-10 bg-container shadow-main rounded-[20px]">
-                        <h2 className="font-philosopher leading-8.5 text-2xl font-bold text-primary">
+                        <h2
+                            className={`${language === "eng" ? "font-philosopher" : "font-noirrit"} leading-8.5 text-2xl font-bold text-primary`}
+                        >
                             {language === "eng" ? (
                                 <p>
                                     Whoever builds a mosque, Allah will make for
@@ -78,7 +80,7 @@ const DonateSection = async () => {
                         </div>
                         <div className="flex gap-6 items-center">
                             <h2 className="font-bold font-philosopher text-2xl">
-                                01712 345678{" "}
+                                017********{" "}
                                 <span
                                     className={`${language === "eng" ? "font-nunito" : "font-noirrit"} font-semibold text-base`}
                                 >
@@ -87,7 +89,7 @@ const DonateSection = async () => {
                                         : "(পার্সোনাল)"}
                                 </span>
                             </h2>
-                            <CopyButton text="01712345678" />
+                            <CopyButton text="017*******" />
                         </div>
                         <div>
                             <ul className="leading-6">
@@ -145,7 +147,7 @@ const DonateSection = async () => {
                                             <span className="font-semibold">
                                                 “Donate to BHJM”
                                             </span>{" "}
-                                            লিখুন।*
+                                            লিখুন।
                                             <span className="text-red-500">
                                                 *
                                             </span>
@@ -252,7 +254,7 @@ const DonateSection = async () => {
                     <p className="text-sm mt-2">
                         {language === "eng"
                             ? "Please include your name as reference."
-                            : "অনুগ্রহ করে রেফারেন্স হিসেবে আপনার নাম উল্লেখ করুন।*"}
+                            : "অনুগ্রহ করে রেফারেন্স হিসেবে আপনার নাম উল্লেখ করুন।"}
 
                         <span className="text-red-500">*</span>
                     </p>

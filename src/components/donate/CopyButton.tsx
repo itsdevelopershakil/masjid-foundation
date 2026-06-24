@@ -1,7 +1,9 @@
 "use client";
 
+import Copy from "@/public/icons/copy.svg";
+import Image from "next/image";
 import { useState } from "react";
-import { RxCheck, RxCopy } from "react-icons/rx";
+import { RxCheck } from "react-icons/rx";
 
 interface CopyButtonProps {
     text: string;
@@ -21,7 +23,11 @@ export function CopyButton({ text }: CopyButtonProps) {
             {copied ? (
                 <RxCheck className="size-6 text-green-500" />
             ) : (
-                <RxCopy className="size-6 cursor-pointer" />
+                <Image
+                    src={Copy}
+                    alt="Copy SVG icon"
+                    className="cursor-pointer"
+                />
             )}
         </button>
     );

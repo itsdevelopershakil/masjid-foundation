@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function LoadingScreen() {
     return (
-        <div className="flex flex-col gap-6 items-center justify-center min-h-screen bg-bg">
+        <div className="flex flex-col gap-6 items-center justify-center min-h-screen bg-bg fixed top-0 left-0 w-full h-screen z-9999999999">
             {/* Mosque dome SVG animation */}
             <div className="mosque-icon">
                 <Image className="size-30" src={loadingIcon} alt="loading" />

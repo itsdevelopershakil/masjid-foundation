@@ -60,11 +60,11 @@ const MobileScreenSection = async () => {
                 <div className="flex justify-between items-center">
                     <p className="font-semibold">
                         <span className="font-philosopher font-bold">
-                            01712 345678
+                            017***********
                         </span>{" "}
                         (Personal)
                     </p>
-                    <CopyButton text="01712345678" />
+                    <CopyButton text="**********" />
                 </div>
                 <ul className="text-sm">
                     <li className="flex  gap-4 max-w-68 leading-6">
