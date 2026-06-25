@@ -42,14 +42,20 @@ const MobileScreenSection = async () => {
           <span className="font-bold">PUBABDDH</span>
         </p>
         <p className="text-xs sm:text-sm font-philosopher">
-          Please include your name as reference
+          {language === "eng"
+            ? "Please include your name as reference"
+            : "অনুগ্রহ করে রেফারেন্স হিসেবে আপনার নাম উল্লেখ করুন।"}
           <span className="span text-red-500">*</span>
         </p>
       </div>
       <div className="bg-container p-5 rounded-[20px] shadow-main leading-8.5 flex flex-col gap-3">
         <div className="flex gap-2 items-center">
           <Image className="size-6" src={Bkash} alt="" />
-          <h3 className="font-bold font-philosopher text-2xl">Bkash</h3>
+          <h3
+            className={`font-bold text-2xl ${language === "eng" ? "font-philosopher" : "font-noirrit"}`}
+          >
+            {language === "eng" ? "Bkash" : "বিকাশ"}
+          </h3>
         </div>
         <div className="flex justify-between items-center">
           <p className="font-semibold">

@@ -68,7 +68,9 @@ const DonateSection = async () => {
               : "উম্মাহর কল্যাণে বাইতুল হক্ব জামে মসজিদ হবে ইবাদত, হেদায়েত ও বিশুদ্ধ ইসলামী শিক্ষার এক বিশ্বস্ত কেন্দ্র। ইনশাআল্লাহ্‌, এখানে সকল বয়সের মানুষ ঈমানকে সুদৃঢ় করতে, সঠিক দ্বীনি জ্ঞান অর্জন করতে এবং ইসলামের আদর্শে উত্তম চরিত্র গঠনের মাধ্যমে একটি সৎ, সচেতন ও ঐক্যবদ্ধ সমাজ প্রতিষ্ঠায় ভূমিকা রাখবে।"}
           </p>
           <div className="p-10 bg-container shadow-main rounded-[20px] space-y-4">
-            <div className="leading-8.5 flex items-center gap-2 text-2xl font-philosopher font-bold">
+            <div
+              className={`leading-8.5 flex items-center gap-2 text-2xl ${language === "eng" ? "font-philosopher" : "font-noirrit"} font-bold`}
+            >
               <Image src={Bkash} className="size-6" alt="" />
               <h4>{language === "eng" ? "Bkash" : "বিকাশ"} </h4>
             </div>
@@ -77,9 +79,7 @@ const DonateSection = async () => {
                 className={`font-bold ${language === "eng" ? "font-philosopher" : "font-noirrit"} text-2xl`}
               >
                 {language === "eng" ? "017***********" : "০১৭***********"}{" "}
-                <span
-                  className={`${language === "eng" ? "font-nunito" : "font-noirrit"} font-semibold text-base`}
-                >
+                <span className={`font-semibold text-base`}>
                   {language === "eng" ? "(Personal)" : "(পার্সোনাল)"}
                 </span>
               </h2>
