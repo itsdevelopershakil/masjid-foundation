@@ -69,7 +69,7 @@ const DonateSection = async () => {
           </p>
           <div className="p-10 bg-container shadow-main rounded-[20px] space-y-4">
             <div
-              className={`leading-8.5 flex items-center gap-2 text-2xl ${language === "eng" ? "font-philosopher" : "font-noirrit"} font-bold`}
+              className={`leading-8.5 flex items-center gap-2 text-2xl ${language === "eng" ? "font-philosopher font-bold" : "font-noirrit font-semibold"}`}
             >
               <Image src={Bkash} className="size-6" alt="" />
               <h4>{language === "eng" ? "Bkash" : "বিকাশ"} </h4>
@@ -78,12 +78,12 @@ const DonateSection = async () => {
               <h2
                 className={`font-bold ${language === "eng" ? "font-philosopher" : "font-noirrit"} text-2xl`}
               >
-                {language === "eng" ? "017***********" : "০১৭***********"}{" "}
+                {language === "eng" ? "018 2148 5568" : "০১৮ ২১৪৮ ৫৫৬৮"}{" "}
                 <span className={`font-semibold text-base`}>
                   {language === "eng" ? "(Personal)" : "(পার্সোনাল)"}
                 </span>
               </h2>
-              <CopyButton text="017*******" />
+              <CopyButton text="01821485568" />
             </div>
             <div>
               <ul className="leading-6">
@@ -127,7 +127,7 @@ const DonateSection = async () => {
                     </p>
                   ) : (
                     <p>
-                      আপনি যদি পরিচয় গোপন রাখতে চান, তাহলে{" "}
+                      আপনি যদি পরিচয় গোপন রাখতে চান, তাহলে রেফারেন্স হিসেবে{" "}
                       <span className="font-semibold">“Donate to BHJM”</span>{" "}
                       লিখুন।
                       <span className="text-red-500">*</span>

@@ -52,7 +52,7 @@ const MobileScreenSection = async () => {
         <div className="flex gap-2 items-center">
           <Image className="size-6" src={Bkash} alt="" />
           <h3
-            className={`font-bold text-2xl ${language === "eng" ? "font-philosopher" : "font-noirrit"}`}
+            className={`text-2xl ${language === "eng" ? "font-philosopher font-bold" : "font-noirrit font-semibold"}`}
           >
             {language === "eng" ? "Bkash" : "বিকাশ"}
           </h3>
@@ -62,11 +62,11 @@ const MobileScreenSection = async () => {
             <span
               className={`${language === "eng" ? "font-philosopher" : "font-noirrit"} font-bold`}
             >
-              {language === "eng" ? "017***********" : "০১৭***********"}
+              {language === "eng" ? "018 2148 5568" : "০১৮ ২১৪৮ ৫৫৬৮"}
             </span>{" "}
             {language === "eng" ? "(Personal)" : "(পার্সোনাল)"}
           </p>
-          <CopyButton text="**********" />
+          <CopyButton text="01821485568" />
         </div>
         <ul className="text-sm">
           <li className="flex  gap-4 max-w-68 leading-6">
@@ -108,7 +108,7 @@ const MobileScreenSection = async () => {
                 </p>
               ) : (
                 <p>
-                  আপনি যদি পরিচয় গোপন রাখতে চান, তাহলে{" "}
+                  আপনি যদি পরিচয় গোপন রাখতে চান, তাহলে রেফারেন্স হিসেবে{" "}
                   <span className="font-semibold">“Donate to BHJM”</span> লিখুন।
                   <span className="text-red-500">*</span>
                 </p>
